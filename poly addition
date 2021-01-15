@@ -1,0 +1,76 @@
+#include<stdio.h>
+void main()
+{
+float a[10],b[10],c[10];
+int i,j,n1,n2,m;
+printf("Enter the highest degree of first polynomial\n");
+scanf("%d",&n1);
+printf("\nEnter the highest degree of second polynomial\n");
+scanf("%d",&n2);
+printf("first polynomail\n");
+for(i=0;i<=n1;i++)
+{
+printf("\nEnter the coefficient of x^%d",i);
+scanf("%f",&a[i]);
+}
+printf("Second polynomial");
+for(i=0;i<=n2;i++)
+{
+printf("Enter the coefficient of x^%d",i);
+scanf(%f",&b[i]);
+}
+m=(n1>=n2)?n1:n2;
+    for(i=0;i<=m;i++)
+    c[i]=a[i]+b[i];
+    printf("\nFirst expression is: ");
+    for(i=n1;i>=0;i--)
+   {
+       if(a[i]==0)
+        continue;
+        else
+        {
+        if(i!=0)
+        printf("%.1fx^%d",a[i],i);
+        else printf("%.1f",a[i]);
+        if(i!=0)
+        { if(a[i-1]<0)
+              printf(" ");
+          else
+              printf(" + "); }}
+   }
+    printf("\nSecond expression is: ");
+    for(i=n2;i>=0;i--)
+    {
+       if(b[i]==0)
+        continue;
+        else
+        {
+        if(i!=0)
+        printf("%.1fx^%d",b[i],i);
+        else printf("%.1f",b[i]);
+        if(i!=0)
+       { if(b[i-1]<0)
+            printf(" ");
+         else
+            printf(" + "); 
+       }
+    }}
+    printf("\nSum of the two polynomials is: ");
+    for(i=m;i>=0;i--)
+    {
+        if(c[i]==0)
+        continue;
+        else
+        {
+        if(i!=0)
+        printf("%.1fx^%d",c[i],i);
+        else printf("%.1f",c[i]);
+        if(i!=0)
+         { if(c[i-1]<0)
+            printf(" ");
+           else
+        printf(" + "); }}
+    }
+    return 0;
+}
+
